@@ -17,12 +17,29 @@
       </div>
     </header>
 
+    <span style="display: block; float: right;">
+      <span id="curDate" style="color: magenta"></span>
+      <span id="curTime" style="color: cyan"></span>
+    </span>
+    <script type="text/javascript">
+    function setDate() {
+      var d = new Date()
+      document.getElementById("curDate").innerHTML = d.toLocaleDateString()
+      document.getElementById("curTime").innerHTML = d.toLocaleString(undefined, {hour: '2-digit', minute: '2-digit', second: '2-digit'})
+    }
+    setDate()
+    setInterval(setDate, 1000)
+    </script>
+
     <links>
       <div class="container">
-        <a href="https://github.com/matijaskala" class="btn btn-github"><span class="icon"></span>My GitHub Profile</a>
-        <a href="https://github.com/matijaskala/kaffeine5" class="btn">Kaffeine Media Player for KDE 5</a>
+        <a href="https://github.com/matijaskala" class="btn btn-github"><span class="icon"></span>My GitHub Profile</a><br><br>
+        <a href="https://github.com/matijaskala/kaffeine5" class="btn">Kaffeine Media Player for KDE 5</a><br><br>
         <a href="https://github.com/matijaskala/compiz-earth" class="btn">Compiz Earth Plugin</a>
-        <a href="https://github.com/matijaskala/compiz-snow" class="btn">Compiz Snow Plugin</a>
+        <a href="https://github.com/matijaskala/compiz-snow" class="btn">Compiz Snow Plugin</a><br><br>
+        <a href="https://github.com/matijaskala/webengine-greeter" class="btn">LightDM Webengine greeter</a><br><br>
+        <a href="https://github.com/matijaskala/grefsen" class="btn">Qt5.12 port of Grefsen compositor</a><br><br>
+        <a href="https://gitlab.com/ms1888/brzip" class="btn">Brzip file compressor</a><br><br>
       </div>
     </links>
   </body>
